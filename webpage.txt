@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SanjayTech</title>
+    <style>
+        /* Style for the left and right divs */
+        #left {
+            width: 20%;
+            height: 90vh; /* 100% of the viewport height */
+            float: left;
+            background-color: pink; /* Change background color to pink */
+        }
+
+        #right {
+            width: 73%;
+            height: 90vh; /* 100% of the viewport height */
+            float: right;
+            background-color: #e0e0e0;
+        }
+
+        /* Additional styling for content within the divs */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            cursor: move;
+            margin: 5px;
+            height: 50px;
+            width: 250px;
+            background-color: pink; /* Change button background color to pink */
+            color: white; /* Change button text color to white */
+        }
+
+        #page {
+            width: 950px;
+            height: 500px;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+
+        .layoutTable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .layoutTable td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button {
+            font-size: 25px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 35px;
+        }
+
+        .curved-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ff69b4; /* Change background color to pink (HTML pink) */
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .curved-button:hover {
+            background-color: #ff1493; /* Change background color on hover to a darker pink */
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+            float: left;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button-logo {
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="left" class="content">
+    <p id="text">web developer</p>
+    <button class="curved-button" id="layout" draggable="true" ondragstart="drag(event)">
+        <img class="button-logo" src="layout image.png" alt="your logo">Layout
+    </button>
+    <button class="curved-button" id="label" draggable="true" ondragstart="drag(event)">Label</button>
+    <button class="curved-button" id="text-box" draggable="true" ondragstart="drag(event)">Text Box</button>
+    <button class="curved-button" id="button" draggable="true" ondragstart="drag(event)">Button</button>
+    <button class="curved-button" id="checkbox" draggable="true" ondragstart="drag(event)">Checkbox</button>
+    <button class="curved-button" id="radio-button" draggable="true" ondragstart="drag(event)">Radio Button</button>
+    <button class="curved-button" id="table" draggable="true" ondragstart="drag(event)">Table</button>
+    <button class="curved-button" id="navigation" draggable="true" ondragstart="drag(event)">Navigation</button>
+</div>
+
+<div id="right" class="content">
+    <div id="page" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+
+</body>
+</html>
